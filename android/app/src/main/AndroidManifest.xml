@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.corona_helpers.corona_helpers">
    <application
-        android:label="corona_helpers"
+        android:label="Corona Helpers"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

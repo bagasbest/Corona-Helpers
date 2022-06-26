@@ -1,3 +1,5 @@
+import 'package:corona_helpers/feature_healthy.dart';
+import 'package:corona_helpers/feature_zone.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -67,7 +69,16 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       menu('assets/images/chat.png', 'Notifikasi'),
-                      menu('assets/images/sytringe.png', 'Kesehatan'),
+                      InkWell(
+                        child: menu('assets/images/sytringe.png', 'Kesehatan'),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FeatureHealthy()),
+                          );
+                        },
+                      ),
                     ],
                   ),
                 ),
@@ -76,7 +87,13 @@ class _HomePageState extends State<HomePage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      menu('assets/images/chart.png', 'Zona Corona'),
+                      InkWell(child: menu('assets/images/chart.png', 'Zona Corona'),onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FeatureZone()),
+                        );
+                      }, ),
                       menu('assets/images/shield.png', 'Pencegahan'),
                     ],
                   ),
